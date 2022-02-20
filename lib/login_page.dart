@@ -5,6 +5,7 @@ import 'package:nazerin_project/Services/userinfo.dart';
 import 'package:nazerin_project/constans/custom_colors.dart';
 import 'package:nazerin_project/customwidgets/buttn_widget.dart';
 import 'package:nazerin_project/customwidgets/textfiled_widget.dart';
+import 'package:nazerin_project/ffirst_page.dart';
 import 'package:nazerin_project/signup_appbar.dart';
 import 'package:validators/validators.dart';
 import 'package:http/http.dart';
@@ -112,7 +113,7 @@ class _Login3State extends State<Login3> {
                       ),
                     ),
 
-                    //⁡⁢⁢⁢Buttns and USERINFO use _______________________________⁡
+                    //! But And UserInfo========================⁡
                     GestureDetector(
                         onTap: () async {
                           //String? username = "Programmer";
@@ -136,12 +137,12 @@ class _Login3State extends State<Login3> {
 
                             // UserInfo.fromJson(user[0][0]);
                             UserInfo userInfo = UserInfo.fromJson(user[0][0]);
-                            // Navigator.of(context).push(MaterialPageRoute(
-                            //     builder: (context) => const FFirstPage()));
-                            print("Display name is : ${userInfo.displayName}");
-                            print("sAMAcount is : ${userInfo.sAMAccountName}");
-                            print(
-                                "PrincipalName is : ${userInfo.userPrincipalName}");
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const FFirstPage()));
+                            // print("Display name is : ${userInfo.displayName}");
+                            // print("sAMAcount is : ${userInfo.sAMAccountName}");
+                            // print(
+                            //     "PrincipalName is : ${userInfo.userPrincipalName}");
                             // print("LastLogon is : ${userInfo.lastLogon}");
                           }
 
